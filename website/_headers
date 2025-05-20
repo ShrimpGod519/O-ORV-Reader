@@ -1,17 +1,22 @@
-/assets/images/*
-  Cache-Control: public, max-age=864000
+*.jpg
+  Cache-Control: public, max-age=7776000, immutable
+*.jpeg
+  Cache-Control: public, max-age=7776000, immutable
+*.png
+  Cache-Control: public, max-age=7776000, immutable
+*.gif
+  Cache-Control: public, max-age=7776000, immutable
+*.webp
+  Cache-Control: public, max-age=7776000, immutable
+*.svg
+  Cache-Control: public, max-age=7776000, immutable
+*.avif
+  Cache-Control: public, max-age=7776000, immutable
 
-/assets/covers/*
-  Cache-Control: public, max-age=864000
+*.css
+  Cache-Control: public, max-age=604800
+*.js
+  Cache-Control: public, max-age=604800
 
-/meta/*
+/*
   Cache-Control: public, max-age=3600
-
-/stories/*
-  Cache-Control: public, max-age=10800
-
-/assets/*
-  Cache-Control: public, max-age=864000
-
-/
-  Cache-Control: public, max-age=21600
