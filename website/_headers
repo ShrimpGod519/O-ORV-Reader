@@ -1,47 +1,14 @@
-assets/images/*
-  Cache-Control: public, max-age=7776000, immutable
-assets/covers/*
-  Cache-Control: public, max-age=7776000, immutable
+/assets/images/*
+  Cache-Control: public, max-age=864000
 
-assets/*.jpg
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.jpeg
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.png
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.gif
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.webp
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.svg
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.avif
-  Cache-Control: public, max-age=7776000, immutable
-assets/*.ico
-  Cache-Control: public, max-age=7776000, immutable
+/assets/covers/*
+  Cache-Control: public, max-age=864000
 
-assets/*.css
-  Cache-Control: public, max-age=604800
-assets/*.js
-  Cache-Control: public, max-age=604800
-
-meta/*.json
+/meta/*
   Cache-Control: public, max-age=3600
 
-stories/orv/read/*
-  Cache-Control: public, max-age=3600
-stories/cont/read/*
-  Cache-Control: public, max-age=3600
-stories/side/read/*
-  Cache-Control: public, max-age=3600
+/stories/*
+  Cache-Control: public, max-age=10800
 
-/
-  Cache-Control: public, max-age=21600
-/stories
-  Cache-Control: public, max-age=21600
-/stories/orv
-  Cache-Control: public, max-age=21600
-/stories/cont
-  Cache-Control: public, max-age=21600
-/stories/side
-  Cache-Control: public, max-age=21600
+/assets/*
+  Cache-Control: public, max-age=10800
