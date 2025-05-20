@@ -12,6 +12,8 @@
   Cache-Control: public, max-age=7776000, immutable
 *.avif
   Cache-Control: public, max-age=7776000, immutable
+*.ico
+  Cache-Control: public, max-age=7776000, immutable
 
 *.css
   Cache-Control: public, max-age=604800
