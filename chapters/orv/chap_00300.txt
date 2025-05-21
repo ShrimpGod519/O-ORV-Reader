@@ -3,7 +3,8 @@
 The Fourth Wall moved the moment Secretive Plotter stared at me. The Fourth Wall growled like a beast protecting its cubs.
 <&>「 Be care ful Kim Dok ja. 」
 The first time I came here, Secretive Plotter called the Fourth Wall the 'Last Wall'. There was no information about it in the original but that didn't mean I had no idea at all. It was because there were various types of walls in Ways of Survival, including Jang Hayoung's Unidentified Wall.
-"I came to receive the compensation, Secretive Plotter." I opened my mouth but Secretive Plotter didn't reply. Sparks were flying around Secretive Plotter. The darkness covering his expression looked angry as he asked me, 【Demon King of Salvation, why did you make that choice?】
+"I came to receive the compensation, Secretive Plotter." I opened my mouth but Secretive Plotter didn't reply. Sparks were flying around Secretive Plotter. The darkness covering his expression looked angry as he asked me,
+<#>【Demon King of Salvation, why did you make that choice?】
 "Huh?"
 I didn't know what he meant by his sudden question. Secretive Plotter asked again,
 <#>【 Why didn't you want to go back to the third round? That world wasn't your round. 】
@@ -96,7 +97,7 @@ A hand hit me on the back. More of them were returnees from Murim or a medieval 
 "By the way, you have already been given the returnee's clothing."
 "Ah, yes."
 I looked down at the Infinite Dimension Space Coat I was wearing. I forgot it was originally a garment only for returnees, just like the Disaster of Questions who I once faced. Maybe that guy was summoned to Earth after going through the same procedure.
-Just then, dokkaebis appeared in the air and started giving coats to the returnees. Several returnees looked between the coats they received and mind and protested.
+Just then, dokkaebis appeared in the air and started giving coats to the returnees. Several returnees looked between the coats they received and mine and protested.
 "Hey dokkaebi! The one he is wearing looks much better…!"
 It was natural. It didn't make sense if a coat received from the 95th scenario was worse than the supply coat.
 Some of the dokkaebis were shocked when they saw me and reported to their superiors. By now, Bihyung should know I was back.
@@ -106,7 +107,7 @@ Flying Fox received the coat and said with a smile, "Uh, nice clothes. What will
 "Ho, do you have a lover waiting?" I smiled at him. Flying Fox kept speaking. "I think I will live in a grand style once I go back. I have obtained a long-awaited strength. I don't need to be intimidated by bullies anymore! Now is the beginning of happiness!"
 "…The days won't be that happy. Earth would've changed a lot."
 "Uhuh, you are already talking weakly. I have been through all that suffering. What can happen when I get back to Earth?"
-<!>[All returnees, please pay attention.]
+<@>[All returnees, please pay attention.]
 The turmoil subsided and the intermediate dokkaebi in charge of the returnees opened his mouth as the representative.
 <@>[You will soon return to Earth. You will be assigned a 'returnee only scenario' and will perform that scenario in your hometown. It is a simple play and I would appreciate it if you enjoyed it.]
 "A returnee scenario? Tell us properly!"
