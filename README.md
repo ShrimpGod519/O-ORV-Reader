@@ -4,7 +4,7 @@
 
  ***ORV-Reader*** is a Fan made project that hosts Unofficial Fan translations of the popluar webnovel ***Omniscient Reader's Viewpoint!***
 
-🌐: [https://orv.pages.dev](https://ORV.pages.dev) \
+🌐: [https://orv.pages.dev](https://orv.pages.dev) \
 ⭐: Dont forget to star this repository 
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Bittu5134/ORV-Reader/deploy-website.yml?branch=main&style=flat-square)
