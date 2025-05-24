@@ -13,7 +13,7 @@
 
 ---
 
-## About ORV
+## About ORV 
 
 **Omniscient Reader's Viewpoint (ORV)** is a captivating web novel following Kim Dokja, a reader who becomes part of the world he once read about. The series includes:
 
@@ -30,7 +30,7 @@ Learn more about the authors **Sing Shong** and the **Illustrator**.
 
 ## Features
 
-* **Custom Themes**: There are like 13 different themes to fit everyone's Asthetics
+- **Custom Themes**: There are like 13 different themes to fit everyone's Asthetics
    * 🌟 Constellation dialogues
    * 👾 Outer God dialogues
    * 💬 System messages
