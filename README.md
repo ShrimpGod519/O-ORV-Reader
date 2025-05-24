@@ -30,7 +30,7 @@ Learn more about the authors **Sing Shong** and the **Illustrator**.
 
 ## Features
 
-- **Custom Themes**: There are like 13 different themes to fit everyone's Asthetics
+* **Custom Themes**: There are like 13 different themes to fit everyone's Asthetics
    * 🌟 Constellation dialogues
    * 👾 Outer God dialogues
    * 💬 System messages
