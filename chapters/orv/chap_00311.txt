@@ -46,7 +46,8 @@ The time of transcendence was opening.
 <&>「 That's right. 」
 Yoo Joonghyuk kept wielding his sword. It was a swordsmanship that was more unrefined than earlier.
 The trajectory was immature and clumsy. The Breaking the Sky Swordsmanship that was on the verge of completion was falling apart again.
-Yoo Joonghyuk asked, 「 Can I become this powerful after going through 41 rounds? 」
+Yoo Joonghyuk asked,
+<&>「 Can I become this powerful after going through 41 rounds? 」
 <&>「 To be exact, it was only this much. 」
 In order to transcend transcendence, one must have the courage to abandon the framework.
 Like an architect breaking the castle because of a window frame, a persistent obsession and desire for perfection became the key to open a new transcendence.
@@ -79,7 +80,7 @@ The star rolling on the ground shone brightly.
 <!>[The scenario's time limit has ended.]
 Like a blessing, the star burst apart in the air and scattered a silver light. We looked up blankly at the light.
 <!>[The room star has failed to be acquired.]
-<@>[Nobody hurt their companion.]
+<!>[Nobody hurt their companion.]
 The 46th main scenario, Proof of the Stars. The scenario could be cleared properly when all the participants didn't harm each other.
 <!>[You have proven your 'trust'.]
 However, those who had reached the 46th scenario didn't think it could be cleared this way.
@@ -128,6 +129,6 @@ They were all modifiers difficult to gather in one place. I fixed my gaze on one
 The two most terrible constellations I knew. The incarnations of these constellations were fighting.
 Abyssal Black Flame Dragon and Demon-like Judge of Fire.
 A dokkaebi's laugh was heard.
-<@>[The wrong that was wrongly assigned will probably end in a bland way.]
+<@>[The room that was wrongly assigned will probably end in a bland way.]
 There was an explosion of red magic power and everything in the room burned. Pale shadows shook in the hazy field of view.
 Flesh was sharply torn and blood flowed. Someone's body was slowly falling down in the smoke.
