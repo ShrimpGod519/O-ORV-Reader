@@ -144,7 +144,9 @@ if __name__ == "__main__":
         )
         unpin_previous_sticky(reddit, subreddit_name)
 
-        selftext = f"""**Author:** Sing Shong \\
+        selftext = f"""___
+
+**Author:** Sing Shong \\
 **Release Date:** {current_date}
 
 Discussion thread for the latest chapter of ORV Side Stories.
@@ -170,11 +172,10 @@ ___
 - If for some reason you can't buy the chapters then consider writing Reviews for ORV on Goodreads and/or other places.
 - Spreading word about a Story is another good way to show your appreciation for the Authors.
 
-___
-
-^(***This post was \\(maybe?\) not created by a Bot :\\)***)"""
+___"""
         new_submission = create_reddit_post(extracted_title, selftext)
         if new_submission:
-            pin_reddit_post(new_submission)
+            pass
+            # pin_reddit_post(new_submission)
     else:
         print("Could not extract a valid title. Not creating or pinning Reddit post.")
