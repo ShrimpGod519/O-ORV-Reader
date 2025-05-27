@@ -1,5 +1,5 @@
 let ChapterList = [];
-let ongoing = false;
+let ongoing = true; // should be the opposite, it works so I ain't touching it
 const script = document.getElementById('main-script');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -30,7 +30,8 @@ function addAllChapters() {
             ChapterList = ChapterList.slice().sort((a, b) => b.index - a.index)
             if (ongoing){ChapterList.reverse()}
             console.log("Chapters loaded:", ChapterList);
-            displayChapters();
+           // displayChapters();
+            filter()
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -48,7 +49,7 @@ function addMeta() {
         .then(data => {
             const info = document.getElementsByClassName("status")[0];
             console.log(data);
-            if (data.status === "Ongoing"){ongoing=true}
+            if (data.status === "Ongoing"){ongoing=false}
             info.innerHTML = `
             <p>${data.title}</p>
             <p>Author: ${data.author}<br>
