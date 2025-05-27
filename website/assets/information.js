@@ -31,7 +31,7 @@ function addAllChapters() {
             console.log("Chapters loaded:", ChapterList);
             if (ongoing){
                 // ChapterList.reverse();
-                displayChapters()}else{filter()}
+                displayChapters();}else{filter()}
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
