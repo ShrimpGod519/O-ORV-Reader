@@ -107,22 +107,22 @@ It had been a while since I had heard such eloquence. It was a speech that was n
 The content of the speech was simple.
 <&>「Let's create a 'single tale' that all constellations share.」
 When the speech was finally over, there was a great reaction in the banquet hall.
-<@>[The constellation, 'Maritime War God', shares the same intentions as 'Director of the False Ending'.]
-<@>[The constellation, 'Bald General of Justice', nods and cheers.]
-<@>[The constellation, 'Goryeo’s First Sword', agrees with 'Director of the False Ending'.]
+<!>[The constellation, 'Maritime War God', shares the same intentions as 'Director of the False Ending'.]
+<!>[The constellation, 'Bald General of Justice', nods and cheers.]
+<!>[The constellation, 'Goryeo’s First Sword', agrees with 'Director of the False Ending'.]
 …
 However, not all the constellations were friendly to her.
-<@>[The constellation, 'Ferocious Lord', asks if you called him to tell him something ridiculous.]
-<@>[The Demon King claims that the 'Black Maned Lion' is just nonsense that doesn't need to be heard anymore.]
-<@>[The constellation, 'Almighty Sun', shakes his head.]
-<@>[The constellations of the nebula, <Asgard>, prepare to leave.]
+<!>[The constellation, 'Ferocious Lord', asks if you called him to tell him something ridiculous.]
+<!>[The Demon King claims that the 'Black Maned Lion' is just nonsense that doesn't need to be heard anymore.]
+<!>[The constellation, 'Almighty Sun', shakes his head.]
+<!>[The constellations of the nebula, <Asgard>, prepare to leave.]
 Han Sooyoung coldly warned those constellations.
 "If you run away like that now, there's no turning back."
-<@>[Some constellations laugh at the words of the 'Director of the False Ending.']
-<@>[A small number of myth-grade constellations say that they don't need to take such risks.]
+<!>[Some constellations laugh at the words of the 'Director of the False Ending.']
+<!>[A small number of myth-grade constellations say that they don't need to take such risks.]
 "Yes, you myth-grade constellations would be like that. But what about the guys below you? What about the constellations that didn't make it to the final scenario? When the Apocalypse starts to twitch its tail, all of these children will die."
-<@>[Some constellations ask if that's true.]
-<@>[A few myth-grade constellations are silent.]
+<!>[Some constellations ask if that's true.]
+<!>[A few myth-grade constellations are silent.]
 "We haven't tried it."
 The solution to some scenarios is very simple. However, since the solution is so simple that anyone can think of it, no one thinks of it as the solution.
 "Never before have all the constellations faced a single disaster."
@@ -137,9 +137,9 @@ After a short pause, Han Sooyoung finished her words.
 If Han Sooyoung, who didn't trust the constellations, had been her usual self, she would never have carried out that plan.
 <&>「To hold a single 'grand banquet' and unite the constellations.」
 Even so, the reason Han Sooyoung adopted the plan was probably because the constellations who changed her mind were also constellations.
-<@>[The constellations of the nebula, <Olympus>, prepare to leave the scenario.]
+<!>[The constellations of the nebula, <Olympus>, prepare to leave the scenario.]
 However, the constellations had lived too long to be persuaded by a brief speech. Their choice had been predetermined.
-<@>[The constellations of the nebula, <Veda>, prepare to leave the scenario.]
+<!>[The constellations of the nebula, <Veda>, prepare to leave the scenario.]
 Faced with the catastrophe before her eyes, Han Sooyoung smiled as if she had expected that.
 "Yeah, I knew it. But you don't have a choice anyway, do you?"
 <!>[From now on, 'Scenario departures' are restricted.]
