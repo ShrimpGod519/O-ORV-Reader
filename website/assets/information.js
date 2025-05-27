@@ -1,4 +1,5 @@
 let ChapterList = [];
+let ongoing = false;
 const script = document.getElementById('main-script');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -27,6 +28,7 @@ function addAllChapters() {
         .then(data => {
             ChapterList.push(...data);
             ChapterList = ChapterList.slice().sort((a, b) => b.index - a.index)
+            if (ongoing){ChapterList.reverse()}
             console.log("Chapters loaded:", ChapterList);
             displayChapters();
         })
@@ -46,7 +48,7 @@ function addMeta() {
         .then(data => {
             const info = document.getElementsByClassName("status")[0];
             console.log(data);
-            
+            if (data.status === "Ongoing"){ongoing=true}
             info.innerHTML = `
             <p>${data.title}</p>
             <p>Author: ${data.author}<br>
@@ -57,8 +59,6 @@ function addMeta() {
             console.error('There was a problem with the fetch operation:', error);
         });
 }
-
-addMeta();
 
 function displayChapters() {
     let chapterSearch = document.getElementById("chapter-result");
@@ -109,5 +109,6 @@ function findChapter(value) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    addMeta();
     addAllChapters();
 });
