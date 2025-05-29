@@ -20,7 +20,7 @@ But Han Sooyoung didn't seem reassured, but rather made a bewildered expression.
 "Did you separate from the main body and cause another problem? Did you get a story that shouldn't be obtained? Like 「Mad Soldier Yoo Joonghyuk」. No. Even if you got a story like that, it wouldn't have been like this—"
 A story that shouldn't be obtained.
 "I've gotten a lot of strange stories."
-<@>[The story, 'Heir of the Eternal Name', chuckles.]
+<!>[The story, 'Heir of the Eternal Name', chuckles.]
 Hearing the story's voice babbling inside me, I thought about my decision once again.
 In fact, my decision was not solely 'my decision'.
 This decision was made with two other Kim Dokja who shared Kim Dokja's story with me.
@@ -83,23 +83,25 @@ If we use the 'story core' that moves the ark, we may be able to revive the part
 "That's right. But there was a problem when you came."
 Han Sooyoung got up from her seat and shook out her pants.
 I followed Han Sooyoung out of the warehouse. As she opened the lid of the underground passage and went outside, a warm heat that I had never felt before came over me. The Apocalypse Seal floating in the sky and the Ark being stuck were the same as before, but the stars felt unusual beyond the atmosphere.
-<@>[All beings in the area are affected by the 'Final Dragon of the Apocalypse'.]
-<@>[All beings in the area are exposed to madness.]
-<@>['Interplanetization' is in progress in the area.]
-<@>[All living things in the area are experiencing real-time mental power decreases.]
-<@>['Twisted Tales' are parasitizing in the area!]
-<@>[All beings in the area are experiencing 'Tales Contamination' in real time!]
+<!>[All beings in the area are affected by the 'Final Dragon of the Apocalypse'.]
+<!>[All beings in the area are exposed to madness.]
+<!>['Interplanetization' is in progress in the area.]
+<!>[All living things in the area are experiencing real-time mental power decreases.]
+<!>['Twisted Tales' are parasitizing in the area!]
+<!>[All beings in the area are experiencing 'Tales Contamination' in real time!]
 Warning messages kept popping up.
 I muttered to myself, 'Oh my god.'
 What is this, having a perfectly good incarnation? Even if I had it, it wasn't an environment where I could possibly survive.
 Looking at me like that, Han Sooyoung smiled.
 "This is really the 1,863rd round."
+
 ***
+
 Han Sooyoung and I worked all night to alleviate the area-wide debuffs that were pouring down in real time.
 Since we couldn't use [Avatar], we moved our bodies ourselves and installed the related equipment one by one.
-<@>[Item, 'Area Tale Curtain', is activated!]
-<@>[Item, 'Area Offset Spray', is activated!]
-<@>[Item, 'Special Pollution Purification Device', is activated!]
+<!>[Item, 'Area Tale Curtain', is activated!]
+<!>[Item, 'Area Offset Spray', is activated!]
+<!>[Item, 'Special Pollution Purification Device', is activated!]
 After finishing installing the equipment in the main spots, the air in the area changed. I couldn't feel the fear of the Apocalypse Dragon that had been weighing on my shoulders, or the otherworldly story that gave me an ominous feeling.
 Indeed, there would be such an item when we reached the final scenario.
 "Okay. It’ll be enough to hold on until I regain my strength.”
@@ -108,11 +110,11 @@ Indeed, there would be such an item when we reached the final scenario.
 I sat side by side with Han Sooyoung in the front yard of the ruined base.
 The sun was slowly setting in the world that was falling apart.
 Han Sooyoung must have watched that scenery alone several times. Left alone in this world where no stars were watching, she must have written a story that no one would read on a lonely blank page.
-<@>[The constellation, 'Maritime War God', nods while watching you.]
+<!>[The constellation, 'Maritime War God', nods while watching you.]
 Huh?
-<@>[The constellation, 'Bald General of Justice', watches the two of you and wipes his head.]
+<!>[The constellation, 'Bald General of Justice', watches the two of you and wipes his head.]
 Wait a minute.
-<@>[The constellation, 'Magic King', hides his throbbing expression.]
+<!>[The constellation, 'Magic King', hides his throbbing expression.]
 "Are these message real?"
 "Then it must be fake?"
 "You said all the constellations are dead."
@@ -122,9 +124,9 @@ In fact, the indirect messages from the constellations didn't have any sense of 
 "Then shouldn't they conserve your strength? If they keep sending out indirect messages like that..."
 "Why would they be excited?"
 I blankly looked up at the sky.
-<@>[The constellation, 'Maritime War God', is looking forward to your existence.]
-<@>[The constellation, 'Bald General of Justice', is curious about your existence.]
-<@>[The constellation, 'Maegeumjijon', is deeply interested in your existence.]
+<!>[The constellation, 'Maritime War God', is looking forward to your existence.]
+<!>[The constellation, 'Bald General of Justice', is curious about your existence.]
+<!>[The constellation, 'Maegeumjijon', is deeply interested in your existence.]
 Goosebumps ran down my spine.
 I wonder why the constellations are talking to me now, risking their own existence.
 "This worldline finally has something to talk about."
