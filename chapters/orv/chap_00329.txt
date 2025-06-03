@@ -7,7 +7,8 @@ I turned after hearing someone's voice and saw a familiar big man. He had a bush
 "I am the Demon King of Salvation."
 Demon King of Salvation. Some of the incarnations and constellations who heard my modifier immediately responded. "Is it the Demon King's Selection…?"
 "T-The demon king who knocked down Surya!"
-The man with the big spear came forward and said. [I am called 'Protector of Changban.]
+The man with the big spear came forward and said.
+<@>[I am called 'Protector of Changban.]
 "Protector of Changban! It is Zhang Fei!"
 Zhang Fei struck his massive chest. 
 <@>[I want to help you. I didn't want to play this childish game but now I'm getting heated up!]
@@ -31,7 +32,7 @@ Failure: Partial disappearance of the 'giant story'.
 * Each faction has two leaders.
 +
 The moment the scenario updated, a green arrow flashed over my head.
-<@>[You already belong to a force.]
+<!>[You already belong to a force.]
 <!>[You are one of the two leaders in charge of the 'giant' forces.]
 The incarnations around me were silent. They had probably received the updated scenario.
 <!>[The constellation 'Prisoner of the Golden Headband' is delighting in this spectacle.]
