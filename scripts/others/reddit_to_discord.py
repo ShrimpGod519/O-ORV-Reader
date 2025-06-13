@@ -10,7 +10,7 @@ REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
 # Updated Reddit username
 REDDIT_USER_AGENT = "OmniscientReaderDiscordBot/1.0 by u/RealNPC_"
 SUBREDDIT_NAME = "OmniscientReader"
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCbJbdFyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVXLU"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"
 
 fetched_post_ids = set()
 
