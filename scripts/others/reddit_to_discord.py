@@ -2,12 +2,11 @@ import praw
 import time
 import os
 import requests
-import re # For regular expressions to handle spoiler tags
+import re
 
 # --- Configuration ---
 REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
 REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
-# Updated Reddit username
 REDDIT_USER_AGENT = "OmniscientReaderDiscordBot/1.0 by u/RealNPC_"
 SUBREDDIT_NAME = "OmniscientReader"
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"
@@ -16,8 +15,9 @@ fetched_post_ids = set()
 
 def convert_reddit_spoiler_to_discord(text):
     """Converts Reddit's >!spoiler!< tag to Discord's ||spoiler|| tag."""
-    # Regex to find >!any text here!<
-    # The (?:.|\n) non-capturing group allows for newlines within the spoiler tag
+    # Ensure text is a string before attempting regex. Non-string types can cause issues.
+    if not isinstance(text, str):
+        return text
     return re.sub(r'>!(.*?)!<', r'|| \1 ||', text, flags=re.DOTALL)
 
 def get_submission_image_url(submission):
@@ -25,17 +25,15 @@ def get_submission_image_url(submission):
     Attempts to get the best image URL for a submission thumbnail.
     Prioritizes preview image for image posts.
     """
-    if submission.is_reddit_media_domain: # e.g., i.redd.it, v.redd.it
-        # For direct image/video links from Reddit
-        if hasattr(submission, 'url') and submission.url.endswith(('.jpg', '.jpeg', '.png', '.gif')):
+    if submission.is_reddit_media_domain:
+        if hasattr(submission, 'url') and submission.url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
             return submission.url
         elif hasattr(submission, 'preview') and 'images' in submission.preview and len(submission.preview['images']) > 0:
             # Get the source URL of the highest quality preview image
             return submission.preview['images'][0]['source']['url']
     elif hasattr(submission, 'thumbnail') and submission.thumbnail not in ("self", "default", "nsfw") and submission.thumbnail.startswith(('http', 'https')):
-        # Fallback to general thumbnail if available and not a placeholder
         return submission.thumbnail
-    return None # No suitable image found
+    return None
 
 def send_to_discord(submission):
     """Sends a rich embed message to the configured Discord webhook."""
@@ -45,14 +43,12 @@ def send_to_discord(submission):
 
     embed_color = 3447003 # A pleasant blue (Hex #3498DB)
 
-    # Convert Reddit spoiler tags in title and selftext
     embed_title = convert_reddit_spoiler_to_discord(submission.title)
 
-    # Determine description and apply spoiler conversion
     description_text = ""
     if submission.is_self:
         description_text = convert_reddit_spoiler_to_discord(submission.selftext)
-    elif submission.link_flair_text: # Sometimes a link flair can describe content
+    elif submission.link_flair_text:
         description_text = f"Link Flair: {submission.link_flair_text}"
     else:
         description_text = "Click the title to view the post!"
@@ -60,13 +56,15 @@ def send_to_discord(submission):
     if len(description_text) > 4000:
         description_text = description_text[:4000] + "..."
 
-    # Check for content warning (can be customized based on flair/keywords)
-    content_warning = "None"
+    # Determine Content Warning based on submission attributes
+    content_warnings = []
     if submission.over_18:
-        content_warning = "NSFW"
-    # You could add more sophisticated logic here, e.g.:
-    # if "spoiler" in submission.link_flair_text.lower():
-    #     content_warning = "Contains Spoilers"
+        content_warnings.append("NSFW")
+    # Use submission.spoiler directly as the primary indicator for spoilers
+    if submission.spoiler:
+        content_warnings.append("Spoilers")
+
+    final_content_warning = ", ".join(content_warnings) if content_warnings else "None"
 
     # Construct the embed
     embed = {
@@ -82,13 +80,12 @@ def send_to_discord(submission):
             },
             {
                 "name": "Content Warning",
-                "value": content_warning,
+                "value": final_content_warning,
                 "inline": False
             }
         ]
     }
 
-    # Get thumbnail URL using the refined function
     thumbnail_url = get_submission_image_url(submission)
     if thumbnail_url:
         embed["thumbnail"] = {"url": thumbnail_url}
