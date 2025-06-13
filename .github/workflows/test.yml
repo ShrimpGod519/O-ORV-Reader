@@ -17,12 +17,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install praw
+          pip install requests
 
       - name: Run Reddit posting script
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
-          SUBREDDIT: DevScriptRun
-        run: python scripts/others/reddit.py
+        run: python scripts/others/reddit_to_discord.py
