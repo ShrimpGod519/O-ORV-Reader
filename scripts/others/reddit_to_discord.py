@@ -3,19 +3,55 @@ import time
 import os
 import requests
 import re
+import json
+from datetime import datetime, timedelta, timezone
+from pathlib import Path # Import Path for cleaner path handling
 
 # --- Configuration ---
 REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
 REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
 REDDIT_USER_AGENT = "OmniscientReaderDiscordBot/1.0 by u/RealNPC_"
 SUBREDDIT_NAME = "OmniscientReader"
+# DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"
 
-fetched_post_ids = set()
+# Define the path for the processed IDs file relative to the script
+# This ensures it's always found/created next to the script itself
+SCRIPT_DIR = Path(__file__).parent
+PROCESSED_IDS_FILE = SCRIPT_DIR / "processed_reddit_post_ids.json"
+
+# --- Functions for loading/saving IDs with timestamps ---
+def load_processed_ids(file_path):
+    """Loads processed post IDs and their timestamps from a JSON file."""
+    processed_data = {}
+    if file_path.exists():
+        try:
+            with open(file_path, 'r') as f:
+                loaded_data = json.load(f)
+                for post_id, timestamp_str in loaded_data.items():
+                    try:
+                        processed_data[post_id] = datetime.fromisoformat(timestamp_str)
+                    except ValueError:
+                        print(f"Warning: Could not parse timestamp for ID {post_id}. Skipping.")
+        except json.JSONDecodeError:
+            print(f"Warning: Could not decode {file_path}. Starting with empty ID set.")
+    return processed_data
+
+def save_processed_ids(file_path, ids_dict):
+    """Saves processed post IDs and their timestamps to a JSON file."""
+    serializable_data = {
+        post_id: dt_obj.isoformat()
+        for post_id, dt_obj in ids_dict.items()
+    }
+    try:
+        with open(file_path, 'w') as f:
+            json.dump(serializable_data, f, indent=4)
+        print(f"Saved {len(ids_dict)} processed IDs to {file_path}")
+    except IOError as e:
+        print(f"Error saving IDs to {file_path}: {e}")
 
 def convert_reddit_spoiler_to_discord(text):
     """Converts Reddit's >!spoiler!< tag to Discord's ||spoiler|| tag."""
-    # Ensure text is a string before attempting regex. Non-string types can cause issues.
     if not isinstance(text, str):
         return text
     return re.sub(r'>!(.*?)!<', r'|| \1 ||', text, flags=re.DOTALL)
@@ -29,7 +65,6 @@ def get_submission_image_url(submission):
         if hasattr(submission, 'url') and submission.url.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
             return submission.url
         elif hasattr(submission, 'preview') and 'images' in submission.preview and len(submission.preview['images']) > 0:
-            # Get the source URL of the highest quality preview image
             return submission.preview['images'][0]['source']['url']
     elif hasattr(submission, 'thumbnail') and submission.thumbnail not in ("self", "default", "nsfw") and submission.thumbnail.startswith(('http', 'https')):
         return submission.thumbnail
@@ -56,17 +91,14 @@ def send_to_discord(submission):
     if len(description_text) > 4000:
         description_text = description_text[:4000] + "..."
 
-    # Determine Content Warning based on submission attributes
     content_warnings = []
     if submission.over_18:
         content_warnings.append("NSFW")
-    # Use submission.spoiler directly as the primary indicator for spoilers
     if submission.spoiler:
         content_warnings.append("Spoilers")
 
     final_content_warning = ", ".join(content_warnings) if content_warnings else "None"
 
-    # Construct the embed
     embed = {
         "title": embed_title,
         "url": submission.url,
@@ -101,9 +133,12 @@ def send_to_discord(submission):
     except requests.exceptions.RequestException as e:
         print(f"Failed to send embed message to Discord: {e}")
 
-def fetch_reddit_posts_praw():
-    global fetched_post_ids
-    print("Starting Reddit to Discord Bot...")
+def main():
+    # fetched_post_ids will now be a dictionary: {id: datetime_processed}
+    processed_ids_data = load_processed_ids(PROCESSED_IDS_FILE)
+    print(f"Loaded {len(processed_ids_data)} previously processed IDs.")
+
+    new_posts_found_this_run = []
 
     try:
         reddit = praw.Reddit(
@@ -115,48 +150,58 @@ def fetch_reddit_posts_praw():
         print(f"Fetching new posts from r/{SUBREDDIT_NAME}...")
         subreddit = reddit.subreddit(SUBREDDIT_NAME)
 
-        new_posts_found = False
-        posts_to_process = []
+        new_discord_posts_sent = False
 
         for submission in subreddit.new(limit=10):
-            if submission.id not in fetched_post_ids:
+            if submission.id not in processed_ids_data:
                 print(f"Found new post: {submission.title} (ID: {submission.id})")
-                posts_to_process.append(submission)
-                fetched_post_ids.add(submission.id)
-                new_posts_found = True
+                send_to_discord(submission)
+                new_posts_found_this_run.append(submission)
+                new_discord_posts_sent = True
+                time.sleep(1)
             else:
                 print(f"Post {submission.id} already processed. Stopping check for older posts.")
                 break
 
-        if not new_posts_found:
-            print("No new Reddit posts found.")
-        else:
-            for post in reversed(posts_to_process):
-                print(f"Sending post to Discord: {post.title}")
-                send_to_discord(post)
-                time.sleep(1)
+        if not new_discord_posts_sent:
+            print("No new Reddit posts found or sent to Discord.")
 
     except praw.exceptions.APIException as e:
         print(f"Error fetching Reddit posts (PRAW API Exception): {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
     finally:
+        # --- Update and Clean processed IDs ---
+        current_time = datetime.now(timezone.utc)
+
+        for submission in new_posts_found_this_run:
+            processed_ids_data[submission.id] = current_time
+
+        cutoff_time = None
+        if new_posts_found_this_run:
+            oldest_new_post_timestamp = min(
+                datetime.fromtimestamp(s.created_utc, tz=timezone.utc)
+                for s in new_posts_found_this_run
+            )
+            cutoff_time = oldest_new_post_timestamp - timedelta(hours=12)
+            print(f"Oldest new post timestamp: {oldest_new_post_timestamp.isoformat()}")
+            print(f"Cleaning IDs older than: {cutoff_time.isoformat()}")
+        else:
+            print("No new posts fetched this run, skipping cleanup based on oldest new post.")
+
+        if cutoff_time:
+            ids_to_keep = {
+                post_id: timestamp_dt
+                for post_id, timestamp_dt in processed_ids_data.items()
+                if timestamp_dt >= cutoff_time
+            }
+            removed_count = len(processed_ids_data) - len(ids_to_keep)
+            processed_ids_data = ids_to_keep
+            if removed_count > 0:
+                print(f"Removed {removed_count} old processed IDs.")
+
+        save_processed_ids(PROCESSED_IDS_FILE, processed_ids_data)
         print("Reddit to Discord Bot finished.")
 
 if __name__ == "__main__":
-    # --- How to set environment variables (Crucial for Client ID/Secret) ---
-    # For Linux/macOS:
-    # export REDDIT_CLIENT_ID="your_client_id_here"
-    # export REDDIT_CLIENT_SECRET="your_client_secret_here"
-    #
-    # For Windows (Command Prompt):
-    # set REDDIT_CLIENT_ID="your_client_id_here"
-    # set REDDIT_CLIENT_SECRET="your_client_secret_here"
-
-    fetch_reddit_posts_praw()
-
-    # Uncomment the loop below to run the bot periodically.
-    # while True:
-    #     fetch_reddit_posts_praw()
-    #     print("Waiting for 5 minutes before next check...")
-    #     time.sleep(300)
+    main()
