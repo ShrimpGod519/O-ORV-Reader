@@ -1,133 +1,97 @@
-import requests
-import json
+import praw
 import time
 import os
+import requests
 
 # --- Configuration ---
-REDDIT_URL = "https://www.reddit.com/r/OmniscientReader/new.json"
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"  # Replace with your actual Discord webhook URL
-DATA_FILE = "reddit_posts.json"
-HEADERS = {
-    "User-Agent": "PythonRedditToDiscordBot/1.0 by u/RealNPC_"  # Always use a User-Agent for Reddit API requests
-}
+# Store sensitive information like client_id and client_secret in environment variables.
+# The Discord Webhook URL is directly set as requested.
+REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
+REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
+# Replace "u/YourRedditUsername" with your actual Reddit username.
+REDDIT_USER_AGENT = "OmniscientReaderDiscordBot/1.0 by u/YourRedditUsername"
+SUBREDDIT_NAME = "OmniscientReader"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCbJbdFyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVXLU"
 
-def load_existing_posts(filename):
-    """Loads existing post IDs from a JSON file."""
-    if os.path.exists(filename):
-        with open(filename, 'r', encoding='utf-8') as f:
-            try:
-                return json.load(f)
-            except json.JSONDecodeError:
-                print(f"Warning: Could not decode JSON from {filename}. Starting with empty data.")
-                return []
-    return []
+# To prevent duplicate posts, store fetched post IDs in a set.
+# For a persistent bot, you'd save this to a database or file.
+fetched_post_ids = set()
 
-def save_posts(filename, posts):
-    """Saves post data to a JSON file."""
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(posts, f, indent=4)
-
-def fetch_reddit_posts(url, headers):
-    """Fetches new posts from Reddit."""
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching Reddit posts: {e}")
-        return None
-
-def create_discord_embed(post):
-    """Creates a Discord embed dictionary from a Reddit post."""
-    title = post['data'].get('title', 'No Title')
-    url = post['data'].get('url', 'No URL')
-    author = post['data'].get('author', 'Unknown Author')
-    permalink = f"https://www.reddit.com{post['data'].get('permalink', '')}"
-    thumbnail = post['data'].get('thumbnail')
-    score = post['data'].get('score')
-    num_comments = post['data'].get('num_comments')
-
-    embed = {
-        "title": title,
-        "url": permalink,
-        "description": f"Posted by u/{author}",
-        "color": 16729344,  # A nice Reddit orange color (decimal)
-        "fields": [],
-        "footer": {
-            "text": f"Score: {score} | Comments: {num_comments}"
-        }
-    }
-
-    if thumbnail and thumbnail.startswith(('http', 'https')):
-        embed["thumbnail"] = {"url": thumbnail}
-
-    # Add URL as a field if it's different from permalink (e.g., direct image/article link)
-    if url != permalink and url.startswith(('http', 'https')):
-        embed["fields"].append({
-            "name": "Link",
-            "value": url,
-            "inline": False
-        })
-      
-    return embed
-
-def send_discord_webhook(webhook_url, embeds):
-    """Sends a Discord webhook message with embeds."""
-    if not embeds:
+def send_to_discord(title, url):
+    """Sends a message to the configured Discord webhook."""
+    if not DISCORD_WEBHOOK_URL:
+        print("Discord webhook URL not set. Cannot send message.")
         return
 
     payload = {
-        "embeds": embeds
+        "content": f"New post on r/{SUBREDDIT_NAME}!\n**{title}**\n{url}"
     }
     try:
-        response = requests.post(webhook_url, json=payload)
+        response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
         response.raise_for_status()
-        print(f"Successfully sent {len(embeds)} post(s) to Discord.")
+        print("Successfully sent message to Discord.")
     except requests.exceptions.RequestException as e:
-        print(f"Error sending Discord webhook: {e}")
+        print(f"Failed to send message to Discord: {e}")
 
-def main():
+def fetch_reddit_posts_praw():
+    global fetched_post_ids
     print("Starting Reddit to Discord Bot...")
-    existing_posts_data = load_existing_posts(DATA_FILE)
-    existing_post_ids = {post['id'] for post in existing_posts_data}
 
-    new_posts_to_save = []
-    embeds_to_send = []
+    try:
+        reddit = praw.Reddit(
+            client_id=REDDIT_CLIENT_ID,
+            client_secret=REDDIT_CLIENT_SECRET,
+            user_agent=REDDIT_USER_AGENT
+        )
 
-    reddit_data = fetch_reddit_posts(REDDIT_URL, HEADERS)
+        print(f"Fetching new posts from r/{SUBREDDIT_NAME}...")
+        subreddit = reddit.subreddit(SUBREDDIT_NAME)
 
-    if reddit_data and 'data' in reddit_data and 'children' in reddit_data['data']:
-        new_posts_found = 0
-        for post in reddit_data['data']['children']:
-            post_id = post['data']['id']
-            if post_id not in existing_post_ids:
-                print(f"New post found: {post['data']['title']}")
-                new_posts_to_save.append(post['data'])
-                embeds_to_send.append(create_discord_embed(post))
-                existing_post_ids.add(post_id) # Add to set to avoid duplicates within the same run
-                new_posts_found += 1
+        new_posts_found = False
+        posts_to_process = []
+
+        # Check the 10 newest posts.
+        for submission in subreddit.new(limit=10):
+            if submission.id not in fetched_post_ids:
+                print(f"Found new post: {submission.title} (ID: {submission.id})")
+                posts_to_process.append(submission)
+                fetched_post_ids.add(submission.id)
+                new_posts_found = True
             else:
-                # Optionally, you can print that a post is already known
-                # print(f"Post already known: {post['data']['title']}")
-                pass
-        print(f"Found {new_posts_found} new posts.")
+                # Stop if an already processed post is found, assuming older posts have been handled.
+                print(f"Post {submission.id} already processed. Stopping check for older posts.")
+                break
 
-        # Append new posts to the existing data before saving
-        existing_posts_data.extend(new_posts_to_save)
-        save_posts(DATA_FILE, existing_posts_data)
-        print(f"Saved {len(new_posts_to_save)} new posts to {DATA_FILE}.")
+        if not new_posts_found:
+            print("No new Reddit posts found.")
+        else:
+            # Process new posts by sending them to Discord, starting with the oldest.
+            for post in reversed(posts_to_process):
+                print(f"Sending post to Discord: {post.title} (URL: {post.url})")
+                send_to_discord(post.title, post.url)
+                time.sleep(1) # Add a small delay to avoid Discord rate limits
 
-        # Send embeds in batches if there are many to avoid Discord rate limits
-        batch_size = 10  # Discord allows up to 10 embeds per message
-        for i in range(0, len(embeds_to_send), batch_size):
-            batch = embeds_to_send[i:i + batch_size]
-            send_discord_webhook(DISCORD_WEBHOOK_URL, batch)
-            time.sleep(1) # Small delay between batches to be safe
-
-    else:
-        print("No new Reddit posts found or an error occurred during fetch.")
-
-    print("Reddit to Discord Bot finished.")
+    except praw.exceptions.APIException as e:
+        print(f"Error fetching Reddit posts (PRAW API Exception): {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+    finally:
+        print("Reddit to Discord Bot finished.")
 
 if __name__ == "__main__":
-    main()
+    # --- How to set environment variables (Crucial for Client ID/Secret) ---
+    # For Linux/macOS:
+    # export REDDIT_CLIENT_ID="your_client_id_here"
+    # export REDDIT_CLIENT_SECRET="your_client_secret_here"
+    #
+    # For Windows (Command Prompt):
+    # set REDDIT_CLIENT_ID="your_client_id_here"
+    # set REDDIT_CLIENT_SECRET="your_client_secret_here"
+
+    fetch_reddit_posts_praw()
+
+    # Uncomment the loop below to run the bot periodically.
+    # while True:
+    #     fetch_reddit_posts_praw()
+    #     print("Waiting for 5 minutes before next check...")
+    #     time.sleep(300)
