@@ -5,7 +5,7 @@ import os
 
 # --- Configuration ---
 REDDIT_URL = "https://www.reddit.com/r/OmniscientReader/new.json"
-DISCORD_WEBHOOK_URL = "https://example.com/your-webhook-id"  # Replace with your actual Discord webhook URL
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"  # Replace with your actual Discord webhook URL
 DATA_FILE = "reddit_posts.json"
 HEADERS = {
     "User-Agent": "PythonRedditToDiscordBot/1.0"  # Always use a User-Agent for Reddit API requests
