@@ -11,7 +11,7 @@ REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
 # Replace "u/YourRedditUsername" with your actual Reddit username.
 REDDIT_USER_AGENT = "OmniscientReaderDiscordBot/1.0 by u/YourRedditUsername"
 SUBREDDIT_NAME = "OmniscientReader"
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCbJbdFyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVXLU"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1383081509287886898/yvNw5rxgq3gfMm7wJzP7XKCgbbdyLiyFM_UjISFfiP3BMGw4IvKKbcFJNjIqTVwXVXLU"
 
 # To prevent duplicate posts, store fetched post IDs in a set.
 # For a persistent bot, you'd save this to a database or file.
