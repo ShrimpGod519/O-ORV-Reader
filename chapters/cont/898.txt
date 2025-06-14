@@ -4,35 +4,35 @@
 ***
 <#>【He's back.】
 ***
-<@>[You've acquired a new tale!]
-<@>[You've acquired the tale, 'The One Who Knows the Truth of the False Ending'!]
+<!>[You've acquired a new tale!]
+<!>[You've acquired the tale, 'The One Who Knows the Truth of the False Ending'!]
 A part of the sparkling story was scattered and absorbed into me.
-<@>[Some of the abilities of incarnation 'Han Sooyoung' will be inherited by you.]
+<!>[Some of the abilities of incarnation 'Han Sooyoung' will be inherited by you.]
 Perhaps this is the last gift Han Sooyoung left me.
 <&>「"Learn it well."」
 Even though she knew that this 'ending' would come, and even though she knew that I wouldn't be needed in her ending, Han Sooyoung taught me everything about herself. This was her choice.
 Her voice hummed in my head.
 As I barely managed to stabilize my breathing, a message came.
-<@>[You've acquired the possibility of a new 'Giant Tale'!]
+<!>[You've acquired the possibility of a new 'Giant Tale'!]
 The possibility of a new Giant Tale. Perhaps it was because it affected the 1,863rd worldline.
 Normally, it would have been something to be happy about, but there was one problem for me.
-<@>[Your 'Giant Tale' is shaking violently!]
-<@>[Your 'Giant Tale' is absorbing the possibility of a new 'Giant Tale'!]
+<!>[Your 'Giant Tale' is shaking violently!]
+<!>[Your 'Giant Tale' is absorbing the possibility of a new 'Giant Tale'!]
 As expected.
 Han Sooyoung was right.
 <&>「"You, you may not be able to complete the introduction, development, climax, and conclusion."」
 It seemed that all the 'Giant Tales' I would obtain would be absorbed into the 'First Giant Tale'.
-<@>[The signs of the 'Super Giant Tale' are becoming more evident.]
+<!>[The signs of the 'Super Giant Tale' are becoming more evident.]
 <!>[You have achieved an impossible feat!]
 <!>[The administration office of the relevant worldline is questioning your existence!]
 A sign of the aftershock that was slowly coming.
 It was the result of me, who was not even a member of this 'worldline', receiving excessive benefits from this worldline. Normally, in this case, the 'Management Bureau' would make one of two choices.
 One is to make the entity that has a negative impact on the scenario a 'disaster' and incorporate it into the scenario.
 And the second is to banish the entity from the scenario.
-<@>[Someone succeeded in negotiating with the 'Dokkaebi King' of the relevant worldline.]
+<!>[Someone succeeded in negotiating with the 'Dokkaebi King' of the relevant worldline.]
 The interests of the Management Bureau coincided with a 'proposal' that came in at the right time.
-<@>[The 'Father King' agrees to proceed with the negotiation.]
-<@>[Someone has granted you permission to use the 'portal'.]
+<!>[The 'Father King' agrees to proceed with the negotiation.]
+<!>[Someone has granted you permission to use the 'portal'.]
 'Forced movement of the worldline' was a transfer that would not be easily attempted unless at least by a 'Secretive Plotter' level entity.
 But there is an entity that can negotiate and pull off that transfer with the 'Management Bureau'.
 Han Sooyoung, who on earth did you contract with?
@@ -63,7 +63,7 @@ When I opened my eyes again, what was revealed was a desolate scene.
 No sign of life was felt around the innermost part of the 'Fear Realm' where everything was destroyed. Suddenly, the scenery of that day came to mind once again. The destruction of the Fear Realm, and the incarnations of the Fear Realm fleeing on the 'train'. The constellations of the giant nebula that attacked the Fear Realm, and the tail of the 'Apocalypse Dragon' that flew over the fault. The gods of the other world who were running away in a panic from the 'Time Fault' where they had been hiding.
 The traces of the ruins that still remained were evidence of the history of that day.
 Including the portal I had come through, all other 'Time Faults' were closed.
-<@>[The 'Time Fault' in question was closed.]
+<!>[The 'Time Fault' in question was closed.]
 Time Fault.
 Was the story I had experienced really a 'history' that existed? Or was it just a 'Time Fault'?
 If it was a story that no one would remember anyway, was there a significant difference between the two?
@@ -153,7 +153,7 @@ I finally recalled the contents of the 'main story'. Just like when Kim Dokja vi
 This time will probably be the same.
 My heart pounded for no reason. Ji Eunyu, Dansu ahjussi, Kyung Sein, Yerin-ssi, Ye Hyunwoo, Killer King… Are they all doing well? And that bastard Yoo Joonghyuk too.
 It was finally time to meet them again. But.
-<@>[Your 'Giant Tale' begins its storytelling.]
+<!>[Your 'Giant Tale' begins its storytelling.]
 What?
 <&>「But Kim Dokja didn't know that back then.」
 I frowned at the sentence that followed quietly.
