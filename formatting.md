@@ -45,7 +45,7 @@ This guide outlines the formatting rules for creating content in the [`/chapters
 
 ### System Window
 - Use `+` before and after text for system messages.
-- adding a line inside `[...]` turns it jnto the title of the window
+- adding a line inside `[...]` turns it into the title of the window
 - These appear as windows shown to the incarnations.
 - Example:
 ```

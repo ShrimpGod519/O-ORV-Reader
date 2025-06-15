@@ -34,7 +34,7 @@ It was the moment when this damn world's 'cash store' was opened.
 
 ***
 
-There were two ways to use coins in Ways of Survival. One of them was to raise the level of the stats such as physique and strength. The other was to use it as a common form of currency that could be used in various stores, including the Dokkaebi Bag.
+There were two ways to use coins in Ways of Survival. One of them was to raise the level of the stats such as 'Physique' and 'Strength'. The other was to use it as a common form of currency that could be used in various stores, including the Dokkaebi Bag.
 <!>[Buy it now! A starter pack for your incarnation for 2,500 coins!]
 <!>[A today only special! A 300% growth package, grow faster than others!]
 <!>[Did you accidentally pick an incarnation with a bad attribute? Don't worry! The 'Random Attribute Box' that can randomly change the attribute has been released!]
@@ -65,9 +65,10 @@ I opened my mouth to use the search function, "Search for the 'Ancient Dragon' i
 <!>[There are three search results.]
 A small pop-up window soon emerged.
 +
-[* Ancient Dragon's Heart – Stock: ?]
-* Ancient Dragon's Bone – Stock: 1
-* Ancient Dragon's Horn – Stock: 1
+[Search Results]
+Ancient Dragon's Heart – Stock: ?
+Ancient Dragon's Bone – Stock: 1
+Ancient Dragon's Horn – Stock: 1
 +
 I chose the Ancient Dragon's Heart.
 +
@@ -83,9 +84,11 @@ As expected, it was out of stock. From beyond the catalog, Bihyung, who was deal
 "I just called out a nice name."
 <@>[…It seems like a lie.]
 I shrugged. In the original Ways of Survival, the owner of the Ancient Dragon's Heart was already determined. If I remembered correctly, the owner of the heart was currently in Italy. They were a person with good luck, getting such a diamond of a sponsor. I called out several more product names.
-<!>[The related product search is completed.]
-<!>[* Great Demon's Eyes – Stock: 0]
-<!>[* Purest Sword Force – Stock: 1]
++
+[Search Results]
+Great Demon's Eyes – Stock: 0
+Purest Sword Force – Stock: 1
++
 The Great Demon's Eyes were sold out… It seemed the hands of the constellations were really quick. Well, I couldn't buy the item anyway since the selling price was 1 million coins. At any rate, it was good to have a sponsor. Now the incarnation with the Great Demon's Eyes would grow and destroy the beginner scenarios.
 <@>[What are you really? What type of cheat are you using? How do you know about items that can only be found in the search?]
 "I just said plausible names."
@@ -95,8 +98,11 @@ Among the three items that I searched for, only the Purest Sword Force was in st
 <@>[Sheesh, what a waste of time.]
 "I am going to buy something else, so bring up the items I call out from now on."
 I called out several item names. After a moment, a list of items emerged in front of me.
-<!>[* Mucus of the Hammer Seahorse – Stock: 124]
-<!>[* Stone Hog's Pointed Thorn – Stock: 17]
++
+[Search Results]
+Mucus of the Hammer Seahorse – Stock: 124
+Stone Hog's Pointed Thorn – Stock: 17
++
 I compared it to the list in my memories. The hammer seahorse, which was the food of the ichthyosaur, and the stone hog, which was the nemesis of sea species… There was no doubt. This combination was the best when it came to attacking an ichthyosaur.
 "Four mucus, four thorns. It is 800 coins?"
 <@>[Yes, but… where are you going to use these miscellaneous items?]
@@ -107,7 +113,7 @@ Bihyung wasn't satisfied but received the payment anyway.
 <!>[800 coins have been consumed.]
 In the darkness, a sparkling powder gathered, and the four elongated thorns and four pockets of black mucus appeared.
 <@>[I can't give a refund if you regret it now. Do you understand?]
-"I know." I nodded briefly and started working. I took off my top, tied it around my waist, and stuck the thorns in the gap between my top and my waist, while the pockets were hung from my waist. The stone hog's thorn was stumpy but became sharp at the end. It was approximately one meter in length. It was a reasonable size to pierce something.
+"I know." I nodded briefly and started working. I took off my shirt, tied it around my waist, and stuck the thorns in the gap between my shirt and my waist, while the pockets were hung from my waist. The stone hog's thorn was stumpy but became sharp at the end. It was approximately one meter in length. It was a reasonable size to pierce something.
 <@>[Hrmm… Then I'll be going. I can't stay with you. There is something fun going on in another place.]
 "Do it."
 <@>[Huhu, then hang in there. I hope the story will bless you.]
