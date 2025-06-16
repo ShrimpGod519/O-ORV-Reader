@@ -14,7 +14,7 @@ for file_index,file in enumerate(os.listdir("chapters/side")):
             original_tag = match.group(0)
             return f"&lt;{original_tag[1:-1]}&gt;"
 
-        pattern = r'<(?!img\b|title\b|cover\b)(?=[^>]{4,})(?=[^>]*\w)[^>]*?>'
+        pattern = r'<(?!img\b|title\b|cover\b|br\b)(?=[^>]{1,})(?=[^>]*\w)[^>]*?>'
         textStr = re.sub(pattern, replace_match, textStr)
         text = textStr.split("\n")
 
