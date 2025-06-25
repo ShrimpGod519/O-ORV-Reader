@@ -3,7 +3,7 @@
 The main episode 'Fear Realm' has been cleared. The strange thing is that even though the scenario has been cleared, the scenario number has not been unlocked.
 Well, considering what happened inside, the Management Bureau must have had a hard time assigning scenario numbers.
 Considering that giant nebulae and mythical constellations appeared and natural disaster-level fears ran rampant, it wouldn't have been strange if the scenario difficulty had been around 70 or higher.
-<@>[Your 'Fear Realm Exploration' is 300%.]
+<!>[Your 'Fear Realm Exploration' is 300%.]
 Not 100%, but 300%.
 I invaded the 'Fear Realm's' final region, joined the 'Transcendent Alliance', and even faced and fought the 'King of Fear'.
 If you don't give me proper recognition, I'll be the one who feels bad.
@@ -83,7 +83,7 @@ Unfortunately, those dumplings were no longer edible.
 A faint longing appeared in Namgung Myung’s eyes and disappeared. He quickly collected his emotions and added with a smile.
 "I have received the grace of the Great Swordsman this time. May I ask your name?"
 I was about to answer, 'Kim Dokja', as usual, but stopped.
-<@>[The constellation, 'Master of Baekrokdam,' listens to your answer.]
+<!>[The constellation, 'Master of Baekrokdam,' listens to your answer.]
 Come to think of it, the name 'Kim Dokja' was already well-known even before I entered the Fear Realm.
 Since I’ve decided to hide my identity, I think it would be better to just watch the situation unfold here for a while.
 “Actually, I don’t remember. It seems that I lost some of my memories while staying in the 'Fear Realm'."
@@ -147,7 +147,7 @@ I felt dizzy.
 Even in the past, there were times when Kim Dokja would deviate from the main scenarios for three years, but he had never disappeared for eight years.
 <&>「I wonder what happened to all the party members.」
 My heart was beating dangerously.
-<@>[Activate exclusive skill, 'Omniscient Reader's Viewpoint'!]
+<!>[Activate exclusive skill, 'Omniscient Reader's Viewpoint'!]
 If there was even one person who thought of me right now, I could connect with them.
 However, even though I activated [Omniscient Reader's Viewpoint], there was no one I could contact. It meant that no one was thinking of me.
 Eight years was that kind of time.
