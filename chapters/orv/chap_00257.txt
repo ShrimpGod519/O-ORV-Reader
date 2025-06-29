@@ -155,6 +155,6 @@ Description: It can fuse together different types of stories. There is a very lo
 An item that had a very low probability of generating a high-grade story when mixing certain combinations of stories. Originally, this item wasn't very useful. The same stories being put together produced different results every time and the odds of getting a good story were ridiculously low.
 Nevertheless, according to the characters' remarks, there was a bug in the 1.3 version of the fusion box.
 <&>「 "The sale of the box was discontinued because of this. Shit, I should've tried it before Anna Croft―" 」
-There was a bug with the 1.3 version fo the Story Fusion Box. It was that when mixing certain stories, the first person who did it must receive a 'certain story'.
+There was a bug with the 1.3 version for the Story Fusion Box. It was that when mixing certain stories, the first person who did it must receive a 'certain story'.
 The two stories were poured into the box without hesitation and there was a bright flash of light. A message entered my ears along with the throbbing pain.
 <!>[The legendary story 'Distorting Things as One Pleases' has been acquired.]
