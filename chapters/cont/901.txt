@@ -1,26 +1,26 @@
 <title>901 Episode 50 The World After The End (4)
-<@>[The person is currently in an unreachable area.]
+<!>[The person is currently in an unreachable area.]
 I blinked stupidly.
 An unreachable area?
-<@>[There are unread messages left in 'Midday Tryst'.]
+<!>[There are unread messages left in 'Midday Tryst'.]
 The fact that there are unread messages means that 'Midday Tryst' is still functioning normally.
 In other words, Yoo Joonghyuk was paying coins to maintain this connection on my behalf.
 This is a little touching, isn't it?
-<@>[There are ??? missed messages.]
-<@>[The usage fee for 'Midday Tryst' is currently partially overdue.]
+<!>[There are ??? missed messages.]
+<!>[The usage fee for 'Midday Tryst' is currently partially overdue.]
 Huh?
-<@>[The usage fee is currently overdue for 32 days.]
-<@>[To check the missed messages, pay the overdue usage fee.]
+<!>[The usage fee is currently overdue for 32 days.]
+<!>[To check the missed messages, pay the overdue usage fee.]
 Hey, you bastard, you didn't pay everything, did you?
 I thought about it for a moment and paid the fee. It's not even a few years, it's only 32 days overdue, so I can pay it. There might be an important message.
-<@>[Payment of overdue fee has been completed.]
+<!>[Payment of overdue fee has been completed.]
 I checked the message right away.
-<@>[The message is damaged and unreadable.]
+<!>[The message is damaged and unreadable.]
 I don't know why, but the message was seriously damaged.
 Come to think of it, there was something similar in the main story. What did Kim Dokja do then?
 <!>[Exclusive skill, 'Fourth Wall', activates!]
 That's right. Kim Dokja in the main story used the power of the [Fourth Wall] to decipher the damaged message. Then, should I do the same?
-<@>[Someone on the 'Fourth Wall' says that they can decipher the message.]
+<!>[Someone on the 'Fourth Wall' says that they can decipher the message.]
 If it's someone on the [Fourth Wall], it must be the 'Demon King of Salvation'. Or the 'King of Fear'? Or maybe the kkoma Kim Dokjas?
 It didn't matter which one. Right now, finding out the contents of the message was the priority.
 'Decipher it.'
@@ -129,29 +129,29 @@ Namgung Myung waved his hand at Hwang Minhyeok, who was glaring.
 "Huh, you don't need to make excuses to me. The audit team will find out the details. By the way, who is the incarnation behind you?"
 "Oh, this person is…"
 Before Namgung Myung could even introduce me, the moving walk began to slow down.
-<@>[You will soon enter the 'New Murim District'!]
+<!>[You will soon enter the 'New Murim District'!]
 <!>[You have entered a new scenario area!]
 At the same time, I saw my body turning translucent.
 Namgung Myung shouted at me urgently.
 "Eungong, I will see you later. And remember! You must choose a company at the judging table! If you don't…!"
 Namgung Myung's figure disappeared, and I started to be transferred somewhere. Judging from the feeling, it seemed that I was about to be summoned to that 'examination board'.
 Amid the dazzling scenery that was quickly passing by, a message appeared before my eyes like a subway advertisement.
-<@>[Tamra Junggong.]
+<!>[Tamra Junggong.]
 —Creating a new world with the bones of forgotten gods.
 Tamra Junggong.
 The name written on the back of that 'Hwang Minhyeok' earlier.
 Was that a company name?
 The advertisement kept coming to mind.
-<@>[Veda Biotech.]
+<!>[Veda Biotech.]
 —Living scripture, rewriting humanity.
 The company name in front seems to be the name of the company, and the one after seems to be a slogan.
-<@>[Baekyo Heritage (百妖遺產).]
+<!>[Baekyo Heritage (百妖遺產).]
 —Technologization of the strange, armament of tradition.
 I started to understand Namgung Myung's words about choosing a company to belong to.
 Is it some kind of sponsor selection?
 After all, this 'scenario region' seems to be a system where you enter a 'company' and progress.
 In the end, it meant that in order to enter this region, you had to choose one of these companies.
-<@>[Olympus Technology, Black Cloud Foundation.]
+<!>[Olympus Technology, Black Cloud Foundation.]
 …
 But as I looked at the passing company names, they all seemed like evil companies.
 Olympus Technology?
