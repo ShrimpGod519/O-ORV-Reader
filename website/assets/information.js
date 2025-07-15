@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const readbtn = document.getElementById("read");
         const reada = document.getElementById("read-a");
 
-        reada.href = `./read/ch_${LastRead + 1}`;
+        reada.href = `./read/ch_${LastRead + 1}.html`;
         readbtn.textContent = "Continue";
     }
 });
@@ -67,7 +67,7 @@ function displayChapters() {
     let chSearchresult = [];
 
     ChapterList.forEach(chapter => {
-        chSearchresult.push(`<div class="chapter_item"><a href="./read/ch_${chapter.index + 1}"><p>${chapter.title}</p></a></div>`);
+        chSearchresult.push(`<div class="chapter_item"><a href="./read/ch_${chapter.index + 1}.html"><p>${chapter.title}</p></a></div>`);
     });
 
     chapterSearch.innerHTML = chSearchresult.join("");
@@ -100,7 +100,7 @@ function findChapter(value) {
         let chSearchindex = title.indexOf(value.toLowerCase());
         let index = ChapterList[i].index;
         if (chSearchindex !== -1) {
-            chSearchresult.push(`<div class="chapter_item"><a href="./read/ch_${index + 1}"><p>${displayTitle}</p></a></div>`);
+            chSearchresult.push(`<div class="chapter_item"><a href="./read/ch_${index + 1}.html"><p>${displayTitle}</p></a></div>`);
         }
     }
     chapterSearch.innerHTML = chSearchresult.join("");
